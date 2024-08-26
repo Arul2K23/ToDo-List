@@ -8,6 +8,7 @@ app.use(cors(
     {
         origin : ["https://todo-list-100-arulkar.vercel.app"],
         methods : ["GET","DELETE","PUT","POST"],
+        allowedHeaders: ['Content-Type', 'Authorization'],
         credentials : true
     }
 ))
