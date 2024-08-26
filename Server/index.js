@@ -12,6 +12,8 @@ app.use(cors(
         credentials : true
     }
 ))
+app.options('*', cors()); // Handle preflight requests
+
 app.use(express.json())
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "https://todo-list-100-git-main-arulkar.vercel.app");
