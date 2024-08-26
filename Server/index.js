@@ -6,7 +6,7 @@ const TodoModel = require('./Models/Todo')
 const app = express()
 app.use(cors(
     {
-        origin : ["https://todo-list-100-arulkar.vercel.app/"],
+        origin : ["https://todo-list-100-arulkar.vercel.app"],
         methods : ["POST","GET"],
         credentials : true
     }
