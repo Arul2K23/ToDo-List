@@ -7,7 +7,7 @@ const app = express()
 app.use(cors(
     {
         origin : ["https://todo-list-100-arulkar.vercel.app"],
-        methods : ["POST","GET","DELETE","PUT"],
+        methods : ["GET","DELETE","PUT","POST"],
         credentials : true
     }
 ))
@@ -16,6 +16,7 @@ app.use(express.json())
 mongoose.connect('mongodb+srv://2005arulkar:aAjykYyYmh0bF3QU@cluster0.hbgzt.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0')
 
 app.get('/get',(req,res)=>{
+    res.json("Server is Running")
     TodoModel.find()
     .then(result=> res.json(result))
     .catch(err => res.json(err))
